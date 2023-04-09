@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>What's New in Spring Framework 5</title>
+
+  <meta name="description" content="Spring 5 Updates">
+  <meta name="author" content="Sergiu Bodiu">
+  <link rel="stylesheet" href="theme.css" id="theme">
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section  class="center" style="text-align: center" transitionSpeed="slow" data-background="#01786e">
+      <h2>What's New <hr/> in Spring Framework 5</h2>
+
+      <p>by Sergiu Bodiu / <i class="fa-icon fa fa-twitter-square"></i><a href="http://twitter.com/sergiu_bodiu">@sergiu_bodiu</a></p>
+      <p class="fragment fa fa-tags">Singapore Spring User Group</p>
+      <p><small class="fa fa-calendar">23 March 2017</small></p>
+
+      <aside class="notes">Hello everyone!</aside>
+    </section>
+    <section class="center" style="text-align: center">
+      <h2><i class="fa fa-certificate"></i>Agenda</h2>
+      <hr />
+      <ul>
+      <li>Our credentials: open source at Pivotal</li>
+      <li class="fragment">The four Cs: code, community, collaboration, & commerce</li>
+      <li class="fragment">Spring Framework</li>
+      <li class="fragment">Demo Application</li>
+      <li class="fragment">Q / A</li>
+      </ul>
+    </section>
+    <section data-markdown="content.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:" data-charset="utf-8">
+    </section>
+
+    <section>
+      <h2><i class="fa fa-rocket"></i>Industry Transformation</h2>
+
+      <ul>
+        <li>Open vs Proprietary</li>
+        <li class="fragment">Open Source is the new Open Standard</li>
+        <li class="fragment">Open Source as a strategic assets</li>
+        <li class="fragment">Purpose Motive as competitive differentiator</li>
+      </ul>
+    </section>
+      
+    <section>
+      <h2>What's New in Spring Framework 5.0</h2>
+      <ol>
+        <li><a href="https://spring.io/blog/2016/07/28/spring-framework-5-0-m1-released">spring.io/blog/2016/07/28/spring-framework-5-0-m1-released</a></li>
+        <li class="fragment"><a href="https://spring.io/blog/2016/09/21/spring-framework-5-0-m2-released">spring.io/blog/2016/09/21/spring-framework-5-0-m2-released</a></li>
+        <li class="fragment"><a href="https://spring.io/blog/2016/11/08/spring-framework-5-0-m3-released">spring.io/blog/2016/11/08/spring-framework-5-0-m3-released</a></li>
+        <li class="fragment"><a href="https://spring.io/blog/2016/12/30/spring-framework-5-0-m4-released">spring.io/blog/2016/12/30/spring-framework-5-0-m4-released</a></li>
+        <li class="fragment"><a href="https://spring.io/blog/2017/02/23/spring-framework-5-0-m5-released">spring.io/blog/2017/02/23/spring-framework-5-0-m5-released</a></li>
+        <li class="fragment"><a href="https://spring.io/blog/2017/02/23/spring-framework-5-0-m5-update">spring.io/blog/2017/02/23/spring-framework-5-0-m5-update</a></li>
+      </ol>
+    </section>
+
+    <section class="center" style="text-align: center">
+      <h2><i class="fa fa-flask"></i>Reactive App Sample</h2>
+
+      https://github.com/sergiubodiu/reactive-app-sample
+
+    </section>
+
+    <section>
+    <h2>Reactive Programming Model</h2>
+    <ul class="r-fit-text">
+      <li><code>spring-core</code> DataBuffer and Encoder/Decoder abstractions with non-blocking semantics.</li>
+      <li><code>spring-web</code> HTTP message codec implementations with JSON (Jackson) and XML (JAXB) support.</li>
+      <li>New <code>spring-web-reactive</code> module with reactive support for the @Controller programming model adapting <a href="https://github.com/reactive-streams/reactive-streams-jvm">Reactive Streams</a> to Servlet 3.1 containers as well as non-Servlet runtimes such as Netty and Undertow.</li>
+      <li>New WebClient with reactive support on the client side.</li> 
+      <p><small>Source: <a href="http://docs.spring.io/spring/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/htmlsingle/#web-reactive">chapter "Web Reactive Framework"</a> in the reference docs.</small></p>
+
+    </section>
+
+<section>
+  <h1 class="r-fit-text"> Q / A </h1>
+</section>
+
+<section>
+  <h1 class="r-fit-text"><i class="fa fa-calendar"></i>What did you learn Today?</h1>
+</section>
+
+<section>
+  <h2><i class="fa fa-certificate"></i>JDK 8+9 and Java EE 7 Baseline</h2>
+  <ul class="r-fit-text">
+    <li>Entire framework codebase based on Java 8 source code level now.:
+      <ul>
+        <li>Improved readability through inferred generics etc.</li>
+        <li>Conditional support for Java 8 features now in straight code.</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="fragment">
+    <hr />
+    <ul class="r-fit-text">
+      <li>Java EE 7 API level required in Spring's corresponding modules now.:
+        <ul>
+          <li>Servlet 3.1, JMS 2.0, JPA 2.1, Bean Validation 1.1</li> 
+          <li>Recent servers: e.g. Tomcat 8.5+, Jetty 9.3+, WildFly 10+</li> 
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="fragment">
+    <hr />
+    <ul class="r-fit-text">
+      <li>Full compatibility with JDK 9 as of July 2016.</li>
+      <ul>
+        <li> Project spring-framework can be built on JDK 9; test suite passes.</li>
+      </ul>
+    </ul>
+  </div>
+</section>
+<section>
+  <h2><i class="fa fa-certificate"></i>Core Container Improvements</h2>
+  <ul class="r-fit-text">
+    <li>Entire framework codebase based on Java 8 source code level now.:
+      <ul>
+        <li>Efficient method parameter access based on Java 8 reflection enhancements.</li>
+        <li>Selective declarations of Java 8 default methods in core Spring interfaces.</li>
+        <li>Consistent use of JDK 7 Charset and StandardCharsets enhancements.</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="fragment">
+    <hr />
+    <ul class="r-fit-text">
+      <li>JDK 9 preparations:
+        <ul>
+          <li>Consistent instantiation via constructors (with revised exception handling)</li> 
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+<section>
+  <h2><i class="fa fa-certificate"></i>General Web Improvements</h2>
+  <ul class="r-fit-text">
+    <li>Unified support for media type resolution through MediaTypeFactory delegate.</li>
+    <li>Full Servlet 3.1 signature support in Spring-provided Filter implementations.</li>
+    <li>Support for Protobuf 3.0 (currently beta 4).</li>
+  </ul>
+</section>
+
+<section data-background="img/voxxed.png" ></section>
+
+<section>
+  <h2><i class="fa fa-certificate"></i>Some talks of interest:</h2>
+  <ol class="r-fit-text">
+    <li> <b>Guillaume Laforge</b> will be presenting "Machine Intelligence at Google Scale"</li>
+    <li> <b>Josh Long</b> will be presenting cloud native java</li>
+    <li> <b>Sergiu Bodiu</b> talking about Chaos Engineering Primer</li>
+    <li> <b>Emmanuel Bernard</b> talking about Hibernate</li>
+    <li> <b>Nida Bouzid</b> and <b>HonWeng Yee</b> talking about very large heaps in java 9</li>
+  </ol>
+
+<p>You can get 10% off by using the code <b>SINGASUG-WITH-VOXXED-DAYS</b>.</p>
+</section>
+    </section>
+  </div>
+
+  <footer style="position:absolute;width:calc(100% - 1em);bottom:0;font-size:40%;z-index:1;display:flex;justify-content:space-between;padding:0.5em">
+    <span>https://sergiubodiu.github.io/presentations/hello-spring-5</span><span style="text-align:right">@sergiu_bodiu</span></footer>
+  
+</div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../dist/notes.js"></script>
+  <script src="../dist/markdown.js"></script>
+  <script src="../dist/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      // progress: true,
+      // history: true,
+      // center: false,
+      width: '100%',
+      margin: 0.15,
+      hash: true,
+      transition: 'fade',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
