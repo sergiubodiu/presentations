@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>What is Backstage</title>
+  <meta name="description" content="What is Spotify Backstage">
+  <meta name="author" content="Sergiu Bodiu">
+  <link rel="stylesheet" href="theme.css" id="theme">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<!-- Introduction -->
+
+<section>
+<h1>What is Backstage?</h1> 
+
+<ul>
+  <li><i class="fa fa-home"></i><a href="https://backstage.io">Homepage</a></li>
+  <li><i class="fa fa-book" ></i><a href="https://backstage.io/docs">Official Documentation</a> </li>
+  <li><i class="fa fa-github"></i><a href="https://github.com/backstage/backstage">Source Code</a> </li> 
+</ul>
+<hr />
+<h3>Happy developers make happy code</h3>
+
+<aside class="notes">Backstage is an open platform for building developer portals.</aside>
+</section>
+<section>
+<!-- Overview -->
+<section>
+<h2>Overview Backstage</h2>
+  <div class="container">
+    <div class="col">
+      <figure>
+        <img style="border-radius: 10%;" alt="Backstage" src="img/backstage.png" >
+        <figcaption><small>Backstage by <a href="spotify.com">Spotify</a></small></figcaption>
+      </figure>
+    </div>
+    <div class="col">
+      <h4>Backstage has a customizable, extensible plugin architecture</h4>
+      <ul>
+        <li>Built with modern technologies and common frameworks.</li>
+        <li>Makes it easy to develop for and contribute to your dev portal.</li>
+        <li>Cloud-agnostic and vendor-neutral.</li>
+      </ul>
+    </div> 
+</div>
+<aside class="notes">
+Backstage is an open platform for building developer portals. It was created at Spotify and open-sourced in March 2020.
+Since open sourcing it, Backstage has become a Sandbox project at the Cloud Native Computing Foundation
+</aside>
+          
+</section>
+<section data-markdown data-background-image="img/image.gif">
+  ## Open Source
+
+  Notes: By building a developer portal on an open platform, you can:
+
+  * Leverage common integrations and best practices developed with the community 
+  * Customize those integrations to suit your unique needs
+</section>
+<section data-markdown>
+## What is a Developer Portal?
+
+### Software is still eating the world
+
+> "Trends like microservices, SaaS sprawl, and cloud-everything create a chaotic ecosystem for engineers." - Spotify
+
+Note: Every company uses different subsets of these tools and faces different challenges.
+Your whole stack is getting more complex;  onboarding and collaboration are becoming more difficult. 
+
+</section>
+<section data-markdown>
+## Show me the data
+
+* 3k+ project forks
+* 38k+ commits
+* 12k+ PRs
+* 15k+ total contributions
+* 21k+ stars on GitHub
+* 9k+ Discord members
+* 100+ open source plugins in the plugin marketplace
+
+<p style="text-align:left"><small>https://backstage.io/blog/2023/03/15/backstage-turns-3</small></p>
+  
+</section>
+</section>
+
+<section>
+<!-- Plugins -->
+<section data-markdown>
+## What's available by default?
+
+* **Entity Catalog:** catalog software, infrastructure resources, people, teams, etc
+* **Documentation-as-code:** a place to read your collection of [mkdocs](https://www.mkdocs.org/)-generated
+  documentation
+* **Software templates:** Scaffold new software projects, create and publish new VCS repos
+* **Authentication:** Integrate with common SSO providers (GitHub, Okta, etc)
+* Extensible via **Plugins**
+
+Note: Backstage is constructed out of three parts. We separate Backstage in this way because we see three groups of contributors that work with Backstage in three different ways:
+* Core: Base functionality built by core developers in the open source project.
+* App: The app is an instance of a Backstage app that is deployed and tweaked. The app ties together core functionality with additional plugins. The app is built and maintained by app developers, usually a productivity team within a company.
+* Plugins: Additional functionality to make your Backstage app useful for your company. Plugins can be specific to a company or open sourced and reusable. 
+
+</section>
+
+<section data-markdown>
+## Entity Catalog
+
+* Majority of features build on catalog entities
+* Track applications, libraries, APIs, teams, systems, database instances, etc
+* Define and consume metadata such as description, ownership, relations, tags, entity type, etc
+* Searchable by metadata
+* Each entity page provides context-aware functionality
+</section>
+
+<section data-markdown>
+  ## Entity Catalog Sample
+
+  ```yaml
+  apiVersion: backstage.io/v1alpha1
+  kind: Component
+  metadata:
+    name: backstage
+    description: The source for all your sources
+    annotations:
+      backstage.io/techdocs-ref: dir:.
+    tags:
+      - nodejs
+      - expressjs
+  spec:
+    type: library
+    owner: spotify-engineering
+    lifecycle: experimental
+  ```
+</section>
+
+<section data-markdown>
+## Software Templates
+
+* Catalog entity `kind: Template`
+* Define user input via JSON schema
+* Define "steps" that perform actions based on user input and template files
+* Common built-in actions include:
+  * Run Nunjucks templating engine
+  * Create new Git repository in GitHub/GitLab/BitBucket
+  * Register new repo in catalog
+* An "action" is a TypeScript function - write your own to do complex or unique logic
+</section>
+
+<section data-markdown>
+## TechDocs
+
+* "Annotate" an entity as utilizing mkdocs
+* Write documentation as code (markdown)
+* Find content across multiple repos using search
+* Generate HTML on-the-fly or pre-render using CI job
+</section>
+
+<section data-markdown>
+## Authentication
+
+* Sign-in via Auth0, Atlassian, GitHub, Okta, etc
+* Protect pages with scopes
+* Protect entities with group/role based rules
+</section>
+</section>
+
+<section>
+<section>
+  <h1>Extensibility</h1>
+  <h3>via</h3>
+  <h2 class="r-fit-text">Plugins </h2>
+  <aside class="notes">As you saw in the demo, the power of Backstage is in its extensibility and customization. We’ve seen that power firsthand and wanted to share more on some of the common patterns that we've seen operating Backstage internally at Spotify as people have extended it. </aside>
+</section>
+
+<section >
+  <h1>Core Functionality</h1>
+<ul>
+<li><i class="fa fa-plug" ></i> Backstage is built to be extended</li>
+
+<li class="fragment"><i class="fa fa-linux"></i> Customize for your infrastructure</li> 
+
+<li class="fragment"><i class="fa fa-desktop"></i> Plugins are npm packages</li> 
+
+<li class="fragment"><i class="fa fa-battery-half"></i> Frontend and backend plugins</li> 
+
+<li class="fragment"><i class="fa fa-battery-full"></i> Core features are plugins too!</li> 
+
+</ul>
+
+<aside class="notes">
+  Backstage functionality provided out-of-the-box can be replicated with other products, but Backstage provides:
+<ul>
+<li>easy-to-modify package</li>
+<li>hosted on your own servers</li>
+<li>maintained by your own developers</li>
+<li>expanded by your own team.</li>
+</ul>
+</aside>
+
+</section>
+
+<section data-markdown>
+## Great resources
+
+* Case studies, explainers, and one-on-one demos:
+
+  http://backstage.spotify.com
+
+* Community Sessions:
+
+  http://github.com/backstage/community
+
+* Discord: 
+
+  https://discord.gg/MUpMjP2
+
+</section>
+</section>
+<section>
+  <h1 class="r-fit-text"> Questions? </h1>
+</section>
+
+</div></div>
+<script src="../dist/reveal.js"></script>
+<script src="../dist/notes.js"></script>
+<script src="../dist/markdown.js"></script>
+<script src="../dist/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    controls: true,
+    // progress: true,
+    // history: true,
+    // center: false,
+    width: '100%',
+    margin: 0.15,
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+</script>
+</body>
+</html>
