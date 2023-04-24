@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DevOps Best Practices</title>
+  <meta name="description" content="DevOps Best Practices NUS ISS">
+  <meta name="author" content="Sergiu Bodiu">
+  <link rel="stylesheet" href="theme.css" id="theme">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<!-- Introduction -->
+<section>
+  <h1>DevOps  Practices</h1> 
+
+  <ul>
+    <li><i class="fa fa-home"></i><a href="https://backstage.io">DevOps Days Singapore</a></li>
+    <li><i class="fa fa-book" ></i><a href="https://backstage.io/docs">DevOps Meetup Singapore</a> </li>
+    <li><i class="fa fa-github"></i><a href="https://sergiubodiu.github.io/2018-devops-digital-economy">Slides</a> </li> 
+  </ul>
+  <hr />
+  <h4>Creating a digital innovation community</h4>
+  
+  <aside class="notes">Backstage is an open platform for building developer portals.</aside>
+</section>
+<section>
+<section data-background-image="img/minion-kekeke-left.jpg">
+  <div class='group'>
+    <div class='col'></div>
+    <div class='col'>
+      <h1 class="red">Hello</h1> 
+      <h1 class="blue" id="sergiu-bodiu">Sergiu Bodiu</h3>
+      <ul>
+        <li>DevOpsDays SG</li>
+        <li>DevOps Meetup</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section data-background-image="img/minion-waaat-right.jpg">
+  <div class='group'>
+    <div class='col'>
+      <h1 class="red">WAAAT</h1> 
+      today we learn DevOps in the class!
+    </div>
+    <div class='col'></div>
+  </div>
+</section>
+</section>
+
+<section><!-- HISTORY-->
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>DEVOPSDAYS GHENT</h5>
+    </div>
+    <div class='main'>
+      <h3>DECEMBER 2009</h1>
+      <h4>Andrew Clay Shafer, Patrick Debois</h4>
+      <h5>Agile Infrastructure - development and systems admin. First DEVOPSDAYS GHENT</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>Web Operations</h5>
+    </div>
+    <div class='main'>
+      <h3>JUNE 2010</h3>
+      <h4>John Allspaw, Jess Robbins</h4>
+      <h5>10+ Deploys Per Day: High-level best practices guide for Dev and Ops Cooperation at Flickr</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>CONTINUOUS DELIVERY</h5>
+    </div>
+    <div class='main'>
+      <h3>AUGUST 2010</h3>
+      <h4>Jez Humble, David Farley</h4>
+      <h5>The Book explores the automation of the build, deployment and testing process</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>THE PHOENIX PROJECT</h5>
+    </div>
+    <div class='main'>
+      <h3>JANUARY 2013</h3>
+      <h4>Gene Kim, Kevin Behr, George Spafford</h4>
+      <h5>A Novel About IT, DevOps, and Helping Your Business Win</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>STATE OF DEVOPS REPORTS</h5>
+    </div>
+    <div class='main'>
+      <h3>2014-PRESENT</h3>
+      <h4>Nicole Forsgren, Gene Kim, Nigel Kersten, Jez Humble</h4>
+      <h5>RECOMMENDATIONS FOR IMPROVEMENT: </h5>
+      <ul>
+        <li>Cross- Functional Collaboration</li>
+        <li>Climate of Learning</li>
+        <li>Tools</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>SITE RELIABILITY ENGINEERING</h5>
+    </div>
+    <div class='main'>
+      <h3>APRIL 2016</h3>
+      <h4>BETSY BEYER, CHRIS JONES, JENNIFER PETOFF, NIALL RICHARD MURPHY</h4>
+      <h5>Learn the principles and practices that enable Google engineers to make systems more scalable, reliable, and efficient</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>THE DEVOPS HANDBOOK</h5>
+    </div>
+    <div class='main'>
+      <h3>OCTOBER 2016</h3>
+      <h4>GENE KIM, JEZ HUMBLE, PATRICK DEBOIS &amp; JOHN WILLIS</h4>
+      <h5>THE DEVOPS HANDBOOK</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h4>HISTORY</h4>
+      <h5>KUBERNETES: UP &amp; RUNNING</h5>
+    </div>
+    <div class='main'>
+      <h3>SEPTEMBER 2017</h3>
+      <h4>BRENDAN BURNS, KELSEY HIGHTOWER, JOE BEDA</h4>
+      <h5>KUBERNETES: UP &amp; RUNNING</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h5>HISTORY</h5>
+      <h4>Infrastructure as code</h4>
+    </div>
+    <div class='main'>
+    <ul style="font-size: 0.8em;">
+      <li>Process of <em>managing</em> and <em>provisioning</em> computer data centers through machine-readable definition files.</li>
+      <li class="fragment">Using <em>declarative</em> style where you write code that specifies your <em>desired</em> end state.</li>
+      <li class="fragment">The IAC tool itself is <em>responsible</em> for figuring out how to achieve that state.</li>
+      <li class="fragment">This definitions will be <em>version controled</em> to audit changes</li>
+      <li class="fragment">This definition will be <em>peer reviewed</em> to improve code quality.</li>
+      <li class="fragment">Write <em>infrastracture tests</em> that will be added to your continuous integration system to automate changes .</li>
+      <li class="fragment">Adopting <em>design patterns</em>.</li>
+    </ul>
+    </div>
+  </div>
+</section>
+<section data-background-image="img/minion-ooo-left.jpg">
+  <div class='group'>
+    <div class='col'></div>
+    <div class='col'>
+      <h2 class="r-fit-text">Infrastructure</h2>
+      <h1 class="red"> as code</h1> 
+    </div>
+  </div>
+</section>
+</section>
+
+<section><!-- TESTING-->
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h5>HISTORY</h5>
+      <h5>Infrastructure as code</h5>
+      <h4>DEV learn from OPS</h4>
+    </div>
+    <div class='main'>
+    <ul style="font-size: 1.2em;">
+      <li><em>Resources</em> (CPU, RAM, Disk)</li>
+      <li><em>Services</em> (Start, Stop, Status)</li>
+      <li><em>Dependencies</em> (Start DB before App)</li>
+      <li><em>Logfiles</em></li>
+      <li><em>Monitoring and Alarming</em></li>
+    </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h5>HISTORY</h5>
+      <h5>Infrastructure as code</h5>
+      <h4>OPS learn from DEV</h4>
+    </div>
+    <div class='main'>
+    <ul style="font-size: 1.2em;">
+      <li><em>Incremental Improvement</em></li>
+      <li><em>Infrastructure as Code</em></li>
+      <li><em>Version Control System</em>  (git, mercurial...)</li>
+      <li><em>Coding</em>  (OOP, Functions, Libraries ...)</li>
+      <li><em>Code Quality</em>  (Static Analysis, Metrics)</li>
+      <li><em>Test Automation</em></li>
+    </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h5>HISTORY</h5>
+      <h5>Infrastructure as code</h5>
+      <h4>DevOps do TEST FIRST</h4>
+    </div>
+    <div class='main'>
+      <h3>Unit Tests</h3>
+      Test the smallest possible components in an artificial environment.
+
+      <h3>System Tests</h3>
+      Test the entire application in a reali(istic) environment together with other applications.
+    </div>
+  </div>
+</section>
+<section data-background-image="img/minion-ooo-right.jpg">
+  <div class='group'>
+    <div class='col'>
+      <h1 class="r-fit-text red">TEST FIRST</h1> 
+    </div>
+    <div class='col'></div>
+  </div>
+</section>
+</section>
+
+<section>
+  <div class='group'>
+    <div class='side'>
+      <h5>HISTORY</h5>
+      <h5>Infrastructure as code</h5>
+      <h5>TEST FIRST</h5>
+      <h4>Strategy</h4>
+    </div>
+    <div class='main'>
+      <ul>
+        <li>Do implement <em>Continuous Integration</em></li>
+        <li class="fragment">Do not create <em>Environment Specific</em> packages</li>
+        <li class="fragment">Do externalize <em>Environment Specific</em> config.</li>
+        <li class="fragment">Do not assume <em>Existing Processes</em> are right.</li>
+        <li class="fragment">Do deloy <em>Less</em> more _**Frequently</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section data-background-image="img/jackie-why.jpg">
+  <div class='group'>
+    <div class='col'></div>
+    <div class='col'>
+      <h1 class="r-fit-text red">Questions?</h1> 
+    </div>
+  </div>
+</section>
+
+</div></div>
+<script src="../dist/reveal.js"></script>
+<script src="../dist/notes.js"></script>
+<script src="../dist/markdown.js"></script>
+<script src="../dist/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    controls: true,
+    width: '100%',
+    margin: 0.15,
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+</script>
+</body>
+</html>
